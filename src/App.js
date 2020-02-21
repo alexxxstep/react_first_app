@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Footer from './components/footer';
+
+
+function createAlert() {
+  alert('hello. You clicked me');
+}
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header info='this is 1 massage'
+        myNumber='6' />
+      <p>main content</p>
+      <Footer trademark='page by Alexxstep'
+        myalert={createAlert} />
+        
     </div>
   );
+
 }
 
 export default App;
